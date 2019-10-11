@@ -83,6 +83,6 @@ int main(){
 		return 0;
 	}
   }
-  cout<<"\nString is successfully Parsed";// the strings that can parse are 'aa' and 'b' for this grammar
+  cout<<"\nString is successfully Parsed";// the strings which can be parsed for this grammar i.e., s->Aa/b , A->a are "aa" and "b"
   return 0;
 }
