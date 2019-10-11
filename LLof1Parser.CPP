@@ -4,9 +4,9 @@
 #include<string.h>
 
 int it;          //input string's trigger
-char stac[4];
-char str[3];
-int tos=0;
+char stac[4];   
+char str[3]; 
+int tos=0;      //top of the stack
 
 void push(char a){
        tos=tos+1;
