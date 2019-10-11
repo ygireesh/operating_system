@@ -36,7 +36,7 @@ void reduce(){
 	}
 }
 
-void printyaa(){
+void print(){
 	int i;
 	cout<<"\n   ";
 	for(i=0;i<=tos;i++){
@@ -53,36 +53,36 @@ int main(){
   stac[0]='$';
   stac[1]='S';
   tos=1;
-  cout<<"ENTER A STRING :  ";
+  cout<<"Enter a string :  ";
   cin>>str;
   if(strlen(str)>2){
-	cout<<"CAN'T PARSE";
+	cout<<"\n can't parse the string !!!";
 	return 0;
   }
   str[strlen(str)]='$';
   it=0;
-  cout<<"\n THE PARSING IS ";
-  printyaa();
+  cout<<"\n The Parsing goes like this : ";
+  print();
   while(!((stac[tos]=='$')&&(str[it]=='$')))
 	{
 	if((stac[tos]=='S')&&((str[it]=='a')||(str[it]=='b'))){
 		reduce();
-		printyaa();
+		print();
 	}
 	else if((stac[tos]=='A')&&(str[it]=='a')){
 		reduce();
-		printyaa();
+		print();
 	}
 	else if(stac[tos]==str[it]){
 		pop();
 		it=it+1;
-		printyaa();
+		print();
 	}
 	else{
-		cout<<"\ncan't parse dudu";
+		cout<<"\n can't parse the string !!!";
 		return 0;
 	}
   }
-  cout<<"\nSTRING SUCESSFULLY PARSED";// the strings that can parse are 'aa' and 'b' for this grammar
+  cout<<"\nString is successfully Parsed";// the strings that can parse are 'aa' and 'b' for this grammar
   return 0;
 }
